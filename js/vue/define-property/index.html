@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+<div id="app"><p>响应式test</p></div>
+
+<script>
+var data = {
+  name: "zhangsan",
+  age: 20
+};
+var vm = new Vue({
+  el: "#app"
+});
+var key;
+for (key in data) {
+  (function (key) {
+    Object.defineProperty(vm, key, {
+      get: function () {
+        console.log("get", data[key]);
+        return data[key];
+      },
+      set: function (newVal) {
+        console.log("set", newVal);
+        data[key] = newVal;
+      }
+    });
+  })(key);
+}
+
+</script>
+</body>
+</html>

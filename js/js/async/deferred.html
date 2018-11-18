@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script>
+/*var wait = function () {
+  var task = function () {
+    console.log("执行成功");
+  };
+  setTimeout(task, 1000);
+};
+wait();*/
+
+//def方式
+//方法封装
+function waitHandle () {
+  var dtd = $.Deferred();
+
+  var wait = function (dtd) {
+    var task = function () {
+      console.log("执行成功");
+      //成功
+      // dtd.resolve();
+      //失败
+      dtd.reject();
+    };
+    setTimeout(task, 1000);
+    return dtd.promise();
+  };
+  return wait(dtd);
+}
+
+//监听
+var w = waitHandle();
+$.when(w).then(function () {
+  console.log("scc 1");
+}, function () {
+  console.log("err 1");
+});
+
+w.then(function () {
+  console.log("scc 2");
+}, function () {
+  console.log("err 2");
+});
+</script>
+</body>
+</html>

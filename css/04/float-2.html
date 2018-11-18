@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <style>
+        html {
+            font-size: 20px;
+        }
+
+        .left {
+            width: 10rem;
+            height: 15rem;
+            float: left;
+            background: yellow;
+        }
+
+        .right {
+            width: 300px;
+            height: 300px;
+            float: right;
+            background: rebeccapurple;
+        }
+
+        @media (max-width: 480px) {
+            html {
+                font-size: 24px;
+            }
+
+            .right {
+                float: none;
+            }
+        }
+
+        @media (max-width: 320px) {
+            html {
+                font-size: 20px;
+            }
+        }
+
+
+        .middle {
+            margin-left: 20px;
+            margin-right: 300px;
+            padding-left: 30px;
+            background: green;
+        }
+
+    </style>
+</head>
+<body>
+<div class="c1">
+    <div class="left">
+        左
+    </div>
+    <div class="right">
+        右右右右右右右
+    </div>
+    <div class="middle">
+        中间
+    </div>
+</div>
+
+
+</body>
+</html>

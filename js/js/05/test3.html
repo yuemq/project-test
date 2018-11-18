@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="div1">
+    <p id="p1">激活</p>
+    <p id="p2">取消</p>
+    <p id="p5">取消</p>
+    <p id="p6">取消</p>
+</div>
+<div id="div2">
+    <p id="p3">取消</p>
+    <p id="p4">取消</p>
+</div>
+<script>
+
+/*//写一个通用函数，这样代码简洁，容易记忆
+function bindEvent (elem, type, fn) {
+  elem.addEventListener(type, fn);
+}
+
+var p1 = document.getElementById("p1");
+bindEvent(p1, "click", function (e) {
+  e.stopPropagation(); //阻止冒泡
+  alert("激活");
+});
+
+var body = document.body;
+bindEvent(body, "click", function (e) {
+  alert("取消");
+});*/
+
+function bindEvent (elem, type, selector, fn) {
+  if (fn == null) {
+    fn = selector;
+    selector = null;
+  }
+
+  elem.addEventListener(type, function (e) {
+    if (selector) {
+      var target = e.target;
+      if (selector.match(target)) {
+        fn.call(target, e);
+      }
+    } else {
+      fn(e);
+    }
+  });
+
+}
+
+//不使用代理
+var p1 = document.getElementById("p1");
+bindEvent(p1, "click", function (e) {
+  e.stopPropagation(); //阻止冒泡
+  alert(p1.innerHTML);
+});
+
+//使用代理
+var body = document.body;
+bindEvent(body, "click", "p", function (e) {
+  alert(this.innerHTML);
+});
+
+var xhr = new XMLHttpRequest();
+xhr.open("GET", "https://api.zhongyehulian.com/content/get_station_fast", false);//false 代表使用异步
+xhr.onreadystatechange = function () {
+  if (xhr.readyState === 4) {
+    if (xhr.status === 200) {
+      // alert(xhr.responseText);
+    }
+  }
+};
+xhr.send(null);
+</script>
+</body>
+</html>

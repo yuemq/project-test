@@ -1,0 +1,9 @@
+.wrapper {
+  background: white;
+  .nav {
+    font-size: 20px;
+    &:hover {
+      background: green;
+    }
+  }
+}

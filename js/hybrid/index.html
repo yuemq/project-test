@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>schema</title>
+</head>
+<body>
+
+<button id="btn1">submit</button>
+<script src="./invoke.js"></script>
+<script>
+/*function invokeScan () {
+    window['_invoke_scan_']=function(){
+        alert("成功");
+    }
+  var iframe = document.createElement("iframe");
+  iframe.style.display = "none";
+  iframe.src = "weixin://utils/scan?k1=v1&k2=v2&callback=_invoke_scan_";
+  var body = document.body;
+  body.appendChild(iframe);
+  setTimeout(function () {
+    body.removeChild(iframe);
+    iframe = null;
+  });
+}*/
+
+document.getElementById(btn1).addEventListener("click", function () {
+  //invokeScan();
+  window.invoke.scan({
+    titile: "111",
+    content: "2333"
+  }, function (result) {
+    if (result.erron === 0) {
+      alert("分享成功");
+    } else {
+      //弹出错误的原因
+      alert(result.message);
+    }
+  });
+});
+</script>
+</body>
+</html>

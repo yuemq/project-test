@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <p>test1</p>
+    <p>test2</p>
+    <p>test3</p>
+</div>
+<p id="test3"><span>test4</span><span>test5</span><span>test6</span></p>
+</body>
+
+</html>
+<script type="text/javascript" src="../test-jquery.js"></script>
+<script>
+// IE10+加载zepto.js
+// IE7-IE9加载jQuery
+var URLLIB = "zepto-1.1.6.js";
+
+if (!history.pushState) {
+  console.log(3333);
+  URLLIB = "my-core-1.1.6.js";
+}
+
+fnJsLoad(URLLIB, function () {
+
+});
+</script>

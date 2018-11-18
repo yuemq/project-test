@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta type="viewport">
+    <style>
+        .c1 {
+            width: 600px;
+            background: red;
+            margin: 20px;
+        }
+
+        .left {
+            width: 300px;
+            height: 80px;
+            float: left;
+            background: green;
+        }
+
+        .c3 {
+            width: 200px;
+            height: 300px;
+            background: aqua;
+        }
+
+        .c1::after {
+            content: 'aaaa';
+            display: block;
+            height: 0px;
+            visibility: hidden;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+<div class="c1">
+    <span class="c2">随便的几个文字</span>
+    <span class="left">左</span>
+    <span class="left">很长的文字， 很长的文字， 很长的文字， 很长的文字，</span>
+</div>
+<div class="c3">
+    teststests
+</div>
+
+
+</body>
+</html>

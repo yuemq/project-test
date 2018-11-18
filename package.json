@@ -1,0 +1,27 @@
+{
+  "name": "example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "@angular/cli": "^6.2.5",
+    "autoprefixer": "^9.2.1",
+    "less": "^3.8.1",
+    "node-sass": "^4.9.4",
+    "postcss-cli": "^6.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yuemq/example.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yuemq/example/issues"
+  },
+  "homepage": "https://github.com/yuemq/example#readme"
+}

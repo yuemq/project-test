@@ -1,0 +1,13 @@
+:host {
+  display: block;
+  margin: 30px;
+  font-size:20px;
+}
+
+:host-context(h1) {
+  background-color: black;
+}
+
+p {
+  color: chartreuse;
+}

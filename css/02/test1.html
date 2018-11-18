@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        @font-face {
+            font-family: "test";
+            src: url("../03/Helvetica Oblique.ttf");
+        }
+
+        .link {
+            font-family: "Dignity Of Labour";
+        }
+
+        #test1 .link a[href] {
+            color: red;
+        }
+
+        p.link {
+            color: yellow;
+        }
+
+        #test1 .link.c2 {
+            color: blue;
+        }
+
+        #pl p + p {
+            padding: 10px;
+            background-color: #ffffff;
+            border: 1px #000000 solid;
+            color: red;
+        }
+
+        p::first-line {
+            color: red
+        }
+    </style>
+</head>
+<body>
+<div id="test1">
+    <p class="link"><a href="test">测试1</a></p>
+    <p class="link">hello world in china 中国制造</p>
+    <p class="link">测试5 <a href class="c2">测试3</a></p>
+    <p class="link c2">测试4</p>
+
+</div>
+
+
+
+<div id="pl">
+    <p>p1</p>
+    <p>p2</p>
+</div>
+
+<p>I am the bone of my sword. Steel is my body, and fire is my blood..
+    I have created over a thoustand blades..
+    Unknown to Death.Nor known to Life. Have withstood pain to create many weapon.
+    Yet, those hands will never hold anything. So as I pray, unlimited blade works.</p>
+
+</body>
+</html>

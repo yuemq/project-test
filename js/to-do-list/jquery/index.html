@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <input id="txt-title" type="text" name=""/>
+    <button id="btn">submit</button>
+</div>
+<ul id="ul-list">
+
+</ul>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script>
+var $txt = $("#txt-title");
+var $btn = $("#btn");
+var $ul = $("#ul-list");
+
+$btn.click(function () {
+  var title = $txt.val();
+  if (!title) {
+    return;
+  }
+
+  $li = $("<li>" + title + "</li>");
+  $ul.append($li);
+  $txt.val("");
+});
+</script>
+</body>
+</html>

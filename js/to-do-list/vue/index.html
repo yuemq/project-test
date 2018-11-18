@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <input v-model="title">
+    <button @click="add">submit</button>
+    <ul>
+        <li v-for="item in list">{{item}}</li>
+    </ul>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+var vm = new Vue({
+  el: "#app",
+  data: {
+    title: "",
+    list: []
+  },
+  methods: {
+    add () {
+      this.list.push(this.title);
+      this.title = "";
+    }
+  }
+});
+</script>
+</body>
+</html>

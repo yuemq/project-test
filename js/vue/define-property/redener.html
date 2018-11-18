@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <input v-model="title">
+    <button @click="add">submit</button>
+    <ul>
+        <li v-for="item in list">{{item}}</li>
+    </ul>
+</div>
+<script src="./vue-2.15.113.js"></script>
+<script>
+var vm = new Vue({
+  el: "#app",
+  data: {
+    title: "",
+    list: []
+  },
+  methods: {
+    add () {
+      this.list.push(this.title);
+      this.title = "";
+    }
+  }
+});
+
+ /*with(this){
+  return _c(
+          'div',
+          {attrs:{"id":"app"}},
+          [
+            _c(
+                'input',
+                {
+                  directives:[{name:"model",rawName:"v-model",value:(title),expression:"title"}],
+                  domProps:{"value":(title)},
+                  on:{"input":function($event){if($event.target.composing)return;title=$event.target.value}}
+                }
+                ),
+            _v(" "),
+            _c(
+              'button',
+              {on:{"click":add}},
+              [_v("submit")]),
+            _v(" "),
+            _c('ul',
+              _l((list),function(item){
+                return _c(
+                          'li',[_v(_s(item))])
+                 })
+             )
+          ]
+  )
+}*/
+
+</script>
+</body>
+</html>

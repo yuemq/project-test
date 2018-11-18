@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta type="viewport">
+    <style>
+        /* 默认是从上到下 , 默认是180deg，逆时针转90度 */
+        .c1 {
+            height: 30px;
+            background: hsla(90, 100%, 50%, .3);
+            /*background: linear-gradient(red, blue);*/
+            /*background: linear-gradient(135deg, transparent 0%, transparent 49.9%, red 49.9%, red 55%, transparent 55%);*/
+            /*background-size: 30px 30px;*/
+        }
+
+        .c2 {
+            height: 30px;
+            margin-top: 20px;
+            /* background: linear-gradient(90deg, red, blue);*/
+            background: linear-gradient(135deg, transparent 0%, transparent 49.9%, red 49.9%, red 55%, transparent 55%),
+            linear-gradient(45deg, transparent 0%, transparent 49.9%, blue 49.9%, blue 55%, transparent 55%);
+            background-size: 30px 30px;
+        }
+
+        .c4 {
+            height: 30px;
+            margin-top: 20px;
+            background: linear-gradient(-90deg, red, blue);
+            /*background: linear-gradient(135deg, transparent 0%, transparent 49.9%, red 49.9%, red 55%, transparent 55%);*/
+            /*background-size: 30px 30px;*/
+        }
+
+        .c3 {
+            width: 400px;
+            height: 300px;
+            /* background-image:-webkit-linear-gradient(-45deg, red, yellow);*/
+            /* background-image:linear-gradient(-45deg, red, yellow);*/
+            background-image: linear-gradient(135deg, red 141.4213562373095px, yellow 282.842712474619px);
+            /*background-size: 400px 300px;*/
+        }
+
+        .c5 {
+            width: 200px;
+            height: 300px;
+            background: url("border.png") no-repeat center;
+            /*background-repeat: no-repeat;
+            background-position:center ;*/
+        }
+
+        .c6 {
+            width: 25px;
+            height: 25px;
+            background-image: url("sprites.png");
+            background-position: -40px -22px;
+        }
+    </style>
+</head>
+<body>
+<div class="c1">
+
+</div>
+
+<div class="c2">
+
+</div>
+
+<div class="c4">
+
+</div>
+
+<div class="c3">
+
+</div>
+
+<div class="c5">
+
+</div>
+
+<div class="c6">
+
+</div>
+</body>
+</html>
